@@ -4,16 +4,15 @@ def gold_room ():
     print ("This room is full of gold. How much do you take?")
     
     choice = input("> ")
-    if "0" in choice or "1" in choice:
+    if choice.isdigit():
         how_nuch = int (choice)
-    else:
-        dead("Man,learn to type a mumber.")
-        
-    if  how_nuch < 50:
-        print ("Nice, you're not greedy,you win!")
-        exit (0)
-    else :
-        dead("You greedy bastard!")
+        if  how_nuch < 50:
+            print ("Nice, you're not greedy,you win!")
+            exit (0)
+        else :
+            dead("You greedy bastard!")
+        else:
+            dead("Man,learn to type a mumber.")
         
         
 def bear_room ():
