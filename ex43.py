@@ -12,16 +12,21 @@ class Scene(object):
 class Engine(object):
 #引擎 类
     def __init__(self,scene_map):
-       self.scene_map = scene_map
+       self.scene_map = scene_map #场景图
 
     def play(self):
-        current_scene = self.scene_map.opening_scene()
-        last_scene = self.scene_map.next_scene('finished')
-        while current_scene != last_scene:
-            next_scene_name = current_scene.enter()
+        current_scene = self.scene_map.opening_scene() #当前运行地图
+        last_scene = self.scene_map.next_scene('finished')#获取最后一张地图变量
+        while current_scene != last_scene: 
+            next_scene_name = current_scene.enter() 
+            #下一张地图名字 = 进行当前运行场景的enter主函数的返回值 返回下一张地图名字
             current_scene = self.scene_map.next_scene(next_scene_name)
+            #当前运行地图名称更改为 scene_map map类的next_scene函数（上一场景的返回值）
             #be sure to print out the last scene
-            current_scene.enter()
+            #current_scene.enter()
+            #继续执行场景主函数
+            if current_scene == last_scene:
+                last_scene.enter()
     # def yes_no (self):
     #     while True:
     #         put = input("yes or no >> ")
@@ -80,13 +85,14 @@ class CentralCorridor(Scene):
             return 'central_corridor'
 
 class LaserWeponArmory(Scene):
-    
+    #武器库 类
     def enter(self):
         print (dedent("""
                 武器库 开锁 十次三位数密码
                 """))
         
-        #code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
+        #code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}" 
+        #设定三位数随机密码
         code = 233
         guess_1 = input("[keypad]> ")
         guess = int(guess_1)
@@ -114,7 +120,7 @@ class LaserWeponArmory(Scene):
 
 
 class TheBridge(Scene):
-
+#舰桥
     def enter(self):
         print (dedent("""
                 炸桥~
@@ -122,6 +128,8 @@ class TheBridge(Scene):
                 慢慢放？ slowly place the bomb 
                 """))
         action = input("> ")
+        if action == "god":
+            return 'finished'
         if action == "throw the bomb":
             print (dedent("""
                     you die
@@ -177,9 +185,10 @@ class Map(object):
     }
     def __init__(self,start_scene):
         self.start_scene = start_scene
-
+        #定义变量 当前地图名称
     def next_scene(self,scene_name):
         val = Map.scenes.get(scene_name)
+        #返回scene_name 对应的 地图类
         return val
 
     def opening_scene(self):
