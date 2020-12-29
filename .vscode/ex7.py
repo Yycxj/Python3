@@ -9,4 +9,4 @@ end3 = "B"
 end4 = "R"
 
 print (end1 + end2 , end=' ')
-print (end3 + end4)
+print (end3 + end4 )
