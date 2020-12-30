@@ -27,4 +27,4 @@ out_file.close()
 in_file.close()
 
 #All code reduced to one line of code
-# open('test-1.txt','w').write(open ('test.txt').read())
+open('test-1.txt','w').write(open ('test.txt').read())
