@@ -4,5 +4,5 @@ def test (a):
     if line :
         print (f"##{line}")
         test (a)
-txt = open ('languages.txt')
+txt = open ('annex/languages.txt')
 test (txt)

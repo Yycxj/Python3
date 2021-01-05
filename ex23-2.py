@@ -6,5 +6,5 @@ def translate (file,coding):
         print (deline)
         translate (file,coding)
         
-x = open("contrast.txt")
+x = open("annex/contrast.txt")
 translate (x,'utf-8')
