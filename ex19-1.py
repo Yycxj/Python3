@@ -22,8 +22,8 @@ dogs_and_cats(dogs_num+2,cats_num+3)
 
 #第五种：
 print ("case five:")
-dogs = int(raw_input("please input numbers of dog:"))
-cats = int(raw_input("please input numbers of cat:"))
+dogs = int(input("please input numbers of dog:"))
+cats = int(input("please input numbers of cat:"))
 dogs_and_cats(dogs, cats)
 
 #第六种：
@@ -36,12 +36,12 @@ dogs_and_cats(dogs + 12, cats + 3)
 
 #第八种：
 print ("case eight:")
-dogs_and_cats(int(raw_input("dogs:")),int(raw_input("cats:")))
+dogs_and_cats(int(input("dogs:")),int(input("cats:")))
 
 #第九种：
 print ("case nine:")
-dogs_and_cats(int(raw_input("dogs:"))+dogs,int(raw_input("cats:"))+cats)
+dogs_and_cats(int(input("dogs:"))+dogs,int(input("cats:"))+cats)
 
 #第十种：
 print ("case nine:")
-dogs_and_cats(int(raw_input("dogs:"))+3,int(raw_input("cats:"))+4)
+dogs_and_cats(int(input("dogs:"))+3,int(input("cats:"))+4)
