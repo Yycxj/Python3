@@ -19,7 +19,7 @@ print_all (current_file)
 
 print ("Now let's rewind, kind of like a tape.")
 
-# rewind (current_file)
+rewind (current_file)
 
 print ("Let's print three lines:")
 
@@ -43,13 +43,13 @@ print_a_line (current_line, current_file)
 # print_a_line (current_line, current_file)
 # current_line = current_line +1
 # print ("?")
-rewind (current_file)
-print_a_line (current_line, current_file)
-# current_line = current_line +1
-print_a_line (current_line, current_file)
-# current_line = current_line +1
-print_a_line (current_line, current_file)
-# current_line = current_line +1
-print_a_line (current_line, current_file)
-# current_line = current_line +1
+# rewind (current_file)
+# print_a_line (current_line, current_file)
+# # current_line = current_line +1
+# print_a_line (current_line, current_file)
+# # current_line = current_line +1
+# print_a_line (current_line, current_file)
+# # current_line = current_line +1
+# print_a_line (current_line, current_file)
+# # current_line = current_line +1
 
