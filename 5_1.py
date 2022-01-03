@@ -6,7 +6,7 @@ def fact(n,m=1):
         s = s*i
     return s//m
 
-def fact (n, *b):
+def fact2 (n, *b):
     s=1
     for i in range(1, n+1):
         s = s*i
