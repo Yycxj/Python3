@@ -21,6 +21,11 @@
 # # print (ll[1])
 # # print [a]
 
-dict = {'Name': 'Runoob', 'Age': 27}
-print ("Age 值为 : %s" %  dict.get('Age'))
-print ("Sex 值为 : %s" %  dict.get('Sex', "NA"))
+# dict = {'Name': 'Runoob', 'Age': 27}
+# print ("Age 值为 : %s" %  dict.get('Age'))
+# print ("Sex 值为 : %s" %  dict.get('Sex', "NA"))
+
+>>> A = {"python",123,("python,123")}
+{123,'python',{'python',123}}
+>>> B = set("pypy123")
+{'1','p','2','3','y'}
