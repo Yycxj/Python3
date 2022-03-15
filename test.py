@@ -20,12 +20,29 @@
 # ff.close()
 # # print (ll[1])
 # # print [a]
-
 # dict = {'Name': 'Runoob', 'Age': 27}
 # print ("Age 值为 : %s" %  dict.get('Age'))
 # print ("Sex 值为 : %s" %  dict.get('Sex', "NA"))
 
->>> A = {"python",123,("python,123")}
-{123,'python',{'python',123}}
->>> B = set("pypy123")
-{'1','p','2','3','y'}
+
+#集合
+
+# >>> A = {"python",123,("python,123")}
+# {123,'python',{'python',123}}
+# >>> B = set("pypy123")
+# {'1','p','2','3','y'}
+
+# A = {'p','y',123}
+# # for item in A :
+# #     print(item,end=" ") 
+# try:
+#     while True:
+#         x = A.pop()
+#         print (x,end=' ')
+# except:
+#     pass
+
+#集合数据去重
+ls = ['p','p','y','y',123,345]
+s =set(ls)
+print (s)
