@@ -16,7 +16,7 @@ class XAwk():
             print(f"re_line_awk keyword type:{type(keyword)} not support")
             sys.exit(2)
 
-        line_cut = re.split(split_keyword, self, string)
+        line_cut = re.split(split_keyword, self.string)
 
         line_re_list: list = []
         for i in re_index:
